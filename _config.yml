@@ -1,0 +1,43 @@
+title: Bluepeak Labs
+tagline: Build faster, ship calmer
+description: >-
+  Bluepeak Labs builds operational software for fast-moving product teams.
+
+url: "https://bluepeaklabs.dev"
+baseurl: ""
+
+author:
+  name: Bluepeak Labs
+  email: hello@bluepeaklabs.dev
+  address: 410 Cedar Avenue, Portland, OR 97205
+  twitter: bluepeaklabs
+  github: bluepeaklabs
+
+collections:
+  products:
+    output: true
+    permalink: /products/:path/
+  team:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: products
+    values:
+      layout: product
+  - scope:
+      path: ""
+      type: team
+    values:
+      layout: page
+
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
